@@ -46,3 +46,25 @@ console.log(longStr.split(',')) // [ 'hello world', ' from SESV!' ]
 // 'string separator' is empty space character ' '
 console.log(longStr.split(' ')) // [ 'hello', 'world,', 'from', 'SESV!' ]
 console.log(longStr) // hello world, from SESV!, original string is not modified
+
+
+
+// Get a substring with 2 indices
+// in this example
+// start index = 6 (included)
+// end index = 11 (excluded)
+console.log(longStr.substring(6, 11)) // world, include 6, exclude 11
+console.log(longStr.slice(6, 11)) // world
+
+
+
+// Lower case all character in string
+let sentence = `It's always sunny in Sunnyvale.`
+console.log(sentence.toLowerCase()) // 'it's always sunny in sunnyvale.'
+console.log(sentence) // 'It's always sunny in Sunnyvale.', un-modified
+
+
+
+// Upper case all character in string
+console.log(sentence.toUpperCase()) // 'IT'S ALWAYS SUNNY IN SUNNYVALE.'
+console.log(sentence) // 'It's always sunny in Sunnyvale.', un-modified
