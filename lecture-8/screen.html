@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <canvas id="myCanvas" width="320" height="320" style="border:1px solid #d3d3d3;">
+      Your browser does not support the HTML5 canvas tag.</canvas>
+    <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      var imgData = ctx.createImageData(300, 300); // 300x300 resolution
+      // imgData is an array length 300x300x4 
+      // imgData is type 1 presentation of a screen data
+      var i;
+      let pixel = 0
+      for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i+0] = 255; // red
+        imgData.data[i+1] = 0; // green
+        imgData.data[i+2] = 0; // blue
+        imgData.data[i+3] = 255; // opacity
+        pixel++
+        console.log(`pixel ${pixel}, RED: ${imgData.data[i+0]}, GREEN: ${imgData.data[i+1]}, BLUE: ${imgData.data[i+2]}, OPACITY: ${imgData.data[i+3]}`)
+      }
+      ctx.putImageData(imgData, 10, 10);
+    </script>
+  </body>
+</html>
