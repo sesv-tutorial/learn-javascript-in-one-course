@@ -158,6 +158,26 @@ console.log(car6.model) // undefined, object does not have property or method ca
 
 
 
+// Method chaining means running method of returned object
+const myObj = {
+  method1: () => {
+    console.log('running method1')
+    return { // return an object which has method2
+      method2: () => console.log('running nested object method2')
+    }
+  }
+}
+// the two following lines
+const myObj2 = myObj.method1() // running method1
+myObj2.method2() // running nested object method2
+// are equivalent to
+myObj.method1().method2() // method chaining
+// running method1
+// running nested object method2
+
+
+
+
 // Convert object to string, JSON.stringify()
 const car8 = {
   name: 'Bumblebee',
