@@ -1,7 +1,7 @@
 // What is closure?
 
 function createCounter() { // outer function
-  let count = 0 // is "remember" and "can be used" by inner function
+  let count = 0 // closure data, is "remember" and "can be used" by inner function
   return { // an object with 3 methods is returned
     increase: () => count = count + 1, // inner function
     decrease: () => count = count - 1, // inner function

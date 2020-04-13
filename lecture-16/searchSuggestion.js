@@ -7,7 +7,7 @@ console.time(TOP_BOTTOM) // timer TOP_BOTTOM start
 console.time(LABEL) // timer FIRST_CALL start 
 
 const createGetSuggestion = () => { // outer function
-  let ok = false // closure data
+  let ok = false // closure data, true for go fetch suggestion data
   let pending = false // closure data
   let keyword = '' // closure data
 
