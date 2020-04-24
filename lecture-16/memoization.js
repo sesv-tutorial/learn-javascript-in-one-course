@@ -33,6 +33,6 @@ console.log(getCodeAndCache('b'))
 
 console.log(getCodeAndCache('a')) // "seen" input
 // { a: 97, b: 98 }, cached 'a' and 'b'
-// new input
+// cached output
 // 97
 
